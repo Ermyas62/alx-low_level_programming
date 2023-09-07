@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main -print with proper grammar using printf followed by new line
+ * main -"print with proper grammar using printf followed by new line
  * Return: 0(integer)
  */
 int main(void)
