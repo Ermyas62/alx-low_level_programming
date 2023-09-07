@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main: print "Programming is like building a multilingual puzzle.
- * Return: 0(return integer)
+ * main - print "Programming is like building a multilingual puzzle.
+ * Return: 0(returns integer)
  */
 int main(void)
 {
