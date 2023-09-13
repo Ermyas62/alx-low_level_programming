@@ -4,7 +4,6 @@
  * jack_bauer - print every minute of a day
  *
  */
-
 void jack_bauer(void)
 {
 	int i, j;
@@ -15,16 +14,15 @@ void jack_bauer(void)
 	{
 		j = 0;
 		while (j < 60)
-		{	
+		{
 			_putchar((i / 10) + '0');
 			_putchar((i / 10) + '0');
+			_putchar(':');
 			_putchar((i / 10) + '0');
 			_putchar((i / 10) + '0');
-			_putchar((i / 10) + '0');
-			_putchar((i / 10) + '0');
+			_putchar('\n');
 			j++;
 		}
 	}
 	i++;
-
 }
