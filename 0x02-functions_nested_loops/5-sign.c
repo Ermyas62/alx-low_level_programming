@@ -2,7 +2,7 @@
 
 /**
  * print_sign - the sign of the number
- * @n : the integer to be checked 
+ * @n: integer to be chechecked
  * Return: 1 if +ve, -1 if -ve and 0 if zero
  */
 
