@@ -1,22 +1,28 @@
 #include "main.h"
 
 /**
- * main - print alphabet in order
- * Return: void
+ * print_alphabet_x10 - print 10 times alphabet in order
+ * followed by new line
  */
 
 
 void print_alphabet_x10(void)
 
 {
-	int i = 1;
+	int i;
 	char j;
+
+	i = 1;
 
 	while (i <= 10)
 	{
-	for (j = 'a'; j <= 'z'; j++)
+	j = 'a';
+	while (j <= 'z')
+		{
 		_putchar(j);
+		j++;
+		}
+		_putchar('\n');
+		i++;
 	}
-	_putchar('\n');
-	i++;
 }
