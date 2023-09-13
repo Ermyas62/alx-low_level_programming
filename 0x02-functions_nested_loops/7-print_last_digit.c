@@ -3,6 +3,7 @@
 /**
  * print_last_digit - print the last digit of a number
  * @a: the number to be treated
+ * @n: the number for comparation
  * Return: value ot the last digit
  */
 
