@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * put_half - prnt half of a string
+ * puts_half - prnt half of a string
  * @str: the string to print
  * Return:void
  */
 
-void put_half(char *str)
+void puts_half(char *str)
 
 {
 	int j = 0;
 	int k;
 
-	while ((str[j] != '\n'))
+	while (str[j] != '\0')
 	{
 	j++;
 	}
