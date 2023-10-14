@@ -1,22 +1,22 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - entry point
- * @S: input character pointer
+ * @S: input
  * @c: input char
  * Return: always succes
  */
 
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	for (; s[i] >= '\0'; i++)
+	while (*s != '\0')
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (*s == c)
+			return (s);
+		s++;
 	}
-
-	return (0);
+		if (*s == c)
+			return (s);
+		return (NULL);
 }
-
