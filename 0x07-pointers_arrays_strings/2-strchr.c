@@ -3,7 +3,7 @@
 
 /**
  * _strchr - entry point
- * @S: input
+ * @s: input
  * @c: input char
  * Return: always succes
  */
