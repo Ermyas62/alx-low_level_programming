@@ -7,8 +7,9 @@
  *            the list
  * @head: a pointer to the list
  * @str: the string to be added
- * @Return: NULL - if the function fails
- *          the address of the new element - else
+ *
+ * Return: if the function fail-NULL
+ *         otherwise- the address of the new element
  */
 
 list_t *add_node(list_t **head, const char *str)
@@ -30,9 +31,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	for (len = 0; str[len];)
 		len++;
-	new-> = dup;
-	new-> = len;
-	new-> = *head;
+	new->str = dup;
+	new->len = len;
+	new->next = *head;
 
 	*head = new;
 
