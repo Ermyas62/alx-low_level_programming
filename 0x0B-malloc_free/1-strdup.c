@@ -1,28 +1,31 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * create_array - creates an array of chars
- * @size: size of the array
- * @c: specfic char to intialize
- * Return: if size == 0 or the function fali - null,
- * otherwise - a pointer
+ * _strdup - duplicate to new memory space locatio
+ * @str: char
+ * Return: 0
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	char *array;
-	unsigned int index;
+	char *aaa;
+	int i, r = 0;
 
-	if (size == 0)
+	if (str == NULL)
 		return (NULL);
-	array = malloc(sizeof(char) * size);
+	i = 0;
 
-	if (array == NULL)
+	while (str[i] != '\0')
+		i++;
+
+	aaa = malloc(sizeof(char) * (i + 1));
+
+	if (aaa == NULL)
 		return (NULL);
+	for (r = 0; str[r]; r++)
+		aaa[r] = str[r];
 
-	for (index = 0; index < size; index++)
-		array[index] = c;
-
-	return (array);
+	return (aaa);
 }
