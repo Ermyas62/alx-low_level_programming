@@ -20,7 +20,7 @@ char *create_buffer(char *file)
 
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILEND,
+		dprintf(STDERR_FILENO,
 			"Error: can't write to %s\n", file);
 		exit(99);
 	}
@@ -52,14 +52,14 @@ void close_file(int fd)
  * @argv: an array of pointers to the arguments
  *
  * Return: 0 on success
- * 
+ *
  * Description: if the argument count is incorrect - exit code 97
  *              if file_from does not exit or can't be read - exit code 98
  *              if file_to cannot be created or written to - exit code 99
  *              if file_to or file_from cann't be closed - exit code 100
  */
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
 	int from, to, r, w;
 	char *buffer;
@@ -75,27 +75,27 @@ int main(int argc, char * argv[])
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do{
+	do {
 		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error, Can't read from file %s\n", argv[1];
-					free(buffer);
-					exit(98);
+				"Error: Can't read from file %s\n", argv[1]);
+			free(buffer);
+			exit(98);
 		}
 
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
-				dprintf(STDERR_FILENO,
-					"Error: Can't write to %s\n", argv[2]);
-					free(buffer);
-					exit(99);
+			dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
 		}
 
 		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}while (r > 0);
+	} while (r > 0);
 
 	free(buffer);
 	close_file(from);
