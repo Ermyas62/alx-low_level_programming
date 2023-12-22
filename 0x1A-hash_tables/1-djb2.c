@@ -1,3 +1,11 @@
+#include "hash_tables.h"
+
+/**
+ * hash_djb2 - hash function implementating the djb2 algorithim
+ * @str: key value to be mapped into the hash table
+ * Return: hash value, used to index the hash table
+ */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
     unsigned long int hash;
