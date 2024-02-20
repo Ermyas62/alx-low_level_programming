@@ -1,5 +1,7 @@
 #ifndef DOG_H_
 #define DOG_H_
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct_dog - a dog's basic info
