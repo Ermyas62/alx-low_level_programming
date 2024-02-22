@@ -4,4 +4,6 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 
 all: $(OBJ)
-	$(CC) $(OBJ) -O $(NAME)
+	@echo "Compiling..."
+	@$(CC) $(OBJ) -O $(NAME)
+	@echo "Done"
